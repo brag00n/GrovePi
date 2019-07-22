@@ -1,0 +1,36 @@
+Metadata-Version: 1.1
+Name: grovepi
+Version: 1.0.4
+Summary: Drivers for using the GrovePi+ in Python
+Home-page: https://github.com/DexterInd/GrovePi
+Author: Dexter Industries
+Author-email: contact@dexterindustries.com
+License: MIT
+Description: The GrovePi should no longer be installed with PIP. Instead, go with the following command:
+        
+        .. code:: bash
+        
+          curl -kL dexterindustries.com/update_grovepi | bash
+        
+        Or if you need to customize your installation, to be better suited for your requirements, check this GitHub `README <https://github.com/DexterInd/GrovePi/tree/master/Script>`_ for more information.
+        
+        ---
+        
+        This is the python library for GrovePi+, which is an open source platform for connecting `Grove Sensors <https://www.dexterindustries.com/GrovePi/supported-sensors/>`_ to the Raspberry Pi.
+        
+        Please visit:
+        
+           * Our `github repo folder <https://github.com/DexterInd/GrovePi/tree/master/Software/Python>`_ for using one of our many example programs.
+           * Or our `official page <https://www.dexterindustries.com/grovepi/>`_ for more details about this platform.
+        
+Keywords: robot,grovepi,grovepi+,dexter industries,learning,education,iot,internet of things,prototyping
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Embedded Systems
+Classifier: Topic :: Software Development :: Libraries :: Python Modules

@@ -1,0 +1,172 @@
+
+Check space left
+================
+Filesystem      Size  Used Avail Use% Mounted on
+overlay          28G   14G   13G  54% /
+tmpfs            64M     0   64M   0% /dev
+tmpfs           489M     0  489M   0% /sys/fs/cgroup
+devtmpfs        484M     0  484M   0% /dev/i2c-1
+/dev/root        28G   14G   13G  54% /etc/hosts
+shm              64M     0   64M   0% /dev/shm
+
+Check for dependencies
+======================
+python 2.7.12-1~16.04 install ok installed
+python-pip 8.1.1-2ubuntu0.4 install ok installed
+git 1:2.7.4-0ubuntu1.6 install ok installed
+libi2c-dev 3.1.1-1 install ok installed
+python-serial 3.0.1-1 install ok installed
+dpkg-query: no packages found matching python-rpi.gpio
+i2c-tools 3.1.1-1 install ok installed
+python-smbus  unknown ok not-installed
+arduino 2:1.0.5+dfsg2-4 install ok installed
+minicom 2.7-1+deb8u1build0.16.04.1 install ok installed
+scratch 1.4.0.6~dfsg1-5 install ok installed
+
+wiringPi Found
+wiringPi Found
+grep: /etc/modprobe.d/raspi-blacklist.conf: No such file or directory
+I2C still in blacklist (ERR)
+grep: /etc/modprobe.d/raspi-blacklist.conf: No such file or directory
+SPI still in blacklist (ERR)
+
+
+Check for addition in /modules
+==============================
+I2C-dev already there
+i2c-bcm2708 already there
+spi-dev already there
+
+
+Hardware revision
+=================
+gpio version: 2.50
+Copyright (c) 2012-2018 Gordon Henderson
+This is free software with ABSOLUTELY NO WARRANTY.
+For details type: gpio -warranty
+
+Raspberry Pi Details:
+  Type: Pi 3B+, Revision: 03, Memory: 1024MB, Maker: Sony 
+  * Device tree is enabled.
+  *--> Raspberry Pi 3 Model B Plus Rev 1.3
+  * This Raspberry Pi supports user-level GPIO access.
+
+
+Check the /dev folder
+=====================
+i2c-1
+ttyAMA0
+
+USB device status
+=================
+Bus 001 Device 004: ID 038f:6001  
+Bus 001 Device 005: ID 10c4:ea60 Cygnal Integrated Products, Inc. CP210x UART Bridge / myAVR mySmartUSB light
+Bus 001 Device 006: ID 0424:7800 Standard Microsystems Corp. 
+Bus 001 Device 003: ID 0424:2514 Standard Microsystems Corp. USB 2.0 Hub
+Bus 001 Device 002: ID 0424:2514 Standard Microsystems Corp. USB 2.0 Hub
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+
+/:  Bus 01.Port 1: Dev 1, Class=root_hub, Driver=dwc_otg/1p, 480M
+    |__ Port 1: Dev 2, If 0, Class=Hub, Driver=hub/4p, 480M
+        |__ Port 1: Dev 3, If 0, Class=Hub, Driver=hub/3p, 480M
+            |__ Port 2: Dev 5, If 0, Class=Vendor Specific Class, Driver=cp210x, 12M
+            |__ Port 1: Dev 6, If 0, Class=Vendor Specific Class, Driver=lan78xx, 480M
+        |__ Port 3: Dev 4, If 0, Class=Video, Driver=uvcvideo, 480M
+        |__ Port 3: Dev 4, If 1, Class=Video, Driver=uvcvideo, 480M
+        |__ Port 3: Dev 4, If 2, Class=Audio, Driver=snd-usb-audio, 480M
+        |__ Port 3: Dev 4, If 3, Class=Audio, Driver=snd-usb-audio, 480M
+Raspbian for Robots Version
+===========================
+cat: /home/pi/di_update/Raspbian_For_Robots/Version: No such file or directory
+
+
+Hostname
+========
+masterwifi
+
+
+Checking for Atmega chip
+========================
+
+
+avrdude: Version 5.10, compiled on Jun 18 2012 at 12:38:29
+         Copyright (c) 2000-2005 Brian Dean, http://www.bdmicro.com/
+         Copyright (c) 2007-2009 Joerg Wunsch
+
+         System wide configuration file is "/etc/avrdude.conf"
+         User configuration file is "/home/pi/.avrduderc"
+         User configuration file does not exist or is not a regular file, skipping
+
+         Using Port                    : unknown
+         Using Programmer              : gpio
+         AVR Part                      : ATMEGA328P
+         Chip Erase delay              : 9000 us
+         PAGEL                         : PD7
+         BS2                           : PC2
+         RESET disposition             : dedicated
+         RETRY pulse                   : SCK
+         serial program mode           : yes
+         parallel program mode         : yes
+         Timeout                       : 200
+         StabDelay                     : 100
+         CmdexeDelay                   : 25
+         SyncLoops                     : 32
+         ByteDelay                     : 0
+         PollIndex                     : 3
+         PollValue                     : 0x53
+         Memory Detail                 :
+
+                                  Block Poll               Page                       Polled
+           Memory Type Mode Delay Size  Indx Paged  Size   Size #Pages MinW  MaxW   ReadBack
+           ----------- ---- ----- ----- ---- ------ ------ ---- ------ ----- ----- ---------
+           eeprom        65     5     4    0 no       1024    4      0  3600  3600 0xff 0xff
+           flash         65     6   128    0 yes     32768  128    256  4500  4500 0xff 0xff
+           lfuse          0     0     0    0 no          1    0      0  4500  4500 0x00 0x00
+           hfuse          0     0     0    0 no          1    0      0  4500  4500 0x00 0x00
+           efuse          0     0     0    0 no          1    0      0  4500  4500 0x00 0x00
+           lock           0     0     0    0 no          1    0      0  4500  4500 0x00 0x00
+           calibration    0     0     0    0 no          1    0      0     0     0 0x00 0x00
+           signature      0     0     0    0 no          3    0      0     0     0 0x00 0x00
+
+         Programmer Type : GPIO
+         Description     : Use sysfs interface to bitbang GPIO lines
+
+avrdude: AVR device initialized and ready to accept instructions
+
+Reading | ################################################## | 100% 0.01s
+
+avrdude: Device signature = 0x1e950f
+avrdude: safemode: lfuse reads as FF
+avrdude: safemode: hfuse reads as DA
+avrdude: safemode: efuse reads as 5
+
+avrdude: safemode: lfuse reads as FF
+avrdude: safemode: hfuse reads as DA
+avrdude: safemode: efuse reads as 5
+avrdude: safemode: Fuses OK
+
+avrdude done.  Thank you.
+
+
+Checking I2C bus for devices
+============================
+
+Checking I2C bus 0
+==================
+Error: Could not open file `/dev/i2c-0' or `/dev/i2c/0': No such file or directory
+
+Checking I2C bus 1
+==================
+     0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+00:          -- 04 -- -- -- -- -- -- -- -- -- -- -- 
+10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+40: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+50: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+60: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 6f 
+70: 70 -- -- -- -- -- -- --                         
+
+Checking for firmware version
+=============================
+GrovePi has firmware version: 1.3.0

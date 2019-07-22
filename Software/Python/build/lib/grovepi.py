@@ -150,8 +150,6 @@ chainableRgbLedSetPattern_cmd = [93]
 chainableRgbLedSetModulo_cmd = [94]
 # sets leds similar to a bar graph, reversible
 chainableRgbLedSetLevel_cmd = [95]
-# Read MPU datas
-mpu_cmd = [96]
 
 # Read the button from IR sensor
 ir_read_cmd=[21]
@@ -266,8 +264,8 @@ def temp(pin, model = '1.0'):
 
 
 # Read value from Grove Ultrasonic
-def ultrasonicRead(pin,pin2):
-	write_i2c_block(uRead_cmd + [pin, pin2, unused])
+def ultrasonicRead(pin):
+	write_i2c_block(uRead_cmd + [pin, unused, unused])
 	number = read_identified_i2c_block(uRead_cmd, no_bytes = 2)
 	return (number[0] * 256 + number[1])
 
@@ -331,13 +329,6 @@ def dht(pin, module_type):
 		return [t, hum]
 	else:
 		return [float('nan'),float('nan')]
-
-def mpu(pin1, pin2, pin3):
-	write_i2c_block(mpu_cmd + [pin1,pin2,pin3])
-	number = read_identified_i2c_block(mpu_cmd, no_bytes = 6)
-	value=bytearray(number[0:4])
-        x_val=round(struct.unpack('f',value)[0],2)
-	return [x_val]
 
 # Grove - Infrared Receiver - get the commands received from the Grove IR sensor
 def ir_read_signal():
