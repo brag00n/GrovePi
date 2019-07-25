@@ -134,15 +134,14 @@ void mpu6050ReadValue(){
   mpu.getFIFOBytes(fifoBuffer, packetSize);
   fifoCount -= packetSize;
   mpu.dmpGetQuaternion(&q, fifoBuffer);
-  afloat=q.x;
+  //afloat=q.x;
+  afloat=-10.3;
   
   buffer=&afloat;
   byte *b1 = (byte *)buffer;
-  byte status=1;
   
   b[0] = cmd[0];
-  b[1] = status;
-  for (j = 2; j < 6; j++)
+  for (j = 1; j < 5; j++)
      b[j] = b1[j - 1];
 }
 
