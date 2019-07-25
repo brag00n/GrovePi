@@ -351,9 +351,11 @@ def dht(pin, module_type):
 def mpu(pin1, pin2, pin3):
 	write_i2c_block(mpu_cmd + [pin1,pin2,pin3])
 	number = read_identified_i2c_block(mpu_cmd, no_bytes = 6)
-	value=bytearray(number[0:4])
+	status=bytearray(number[0:0])
+	value=bytearray(number[1:5])
+        x_stat=round(struct.unpack('c',value)[0],2)
         x_val=round(struct.unpack('f',value)[0],2)
-	return [x_val]
+	return [x_stat,x_val]
 
 # Grove - Infrared Receiver - get the commands received from the Grove IR sensor
 def ir_read_signal():
